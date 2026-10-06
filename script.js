@@ -94,7 +94,7 @@ const sections = [
       "O objetivo aqui é identificar exceções e necessidades novas — não auditar cada componente usado na tela.",
     items: [
       [
-        "A solução utiliza os componentes mobile disponíveis no Design System sempre que aplicável?",
+        "O projeto utiliza os componentes mobile disponíveis no Design System sempre que aplicável?",
         "Evite criar uma solução específica quando já existe um componente adequado no DS.",
       ],
       [
@@ -106,7 +106,7 @@ const sections = [
         "Sinalize para avaliar se é uma necessidade específica ou uma evolução do DS.",
       ],
       [
-        "Ações menos importantes foram organizadas sem competir com a ação principal?",
+        "Quando necessário, ações secundárias foram organizadas sem competir com a ação principal?",
         "Quando fizer sentido, considere Menu/Overflow ou outra forma de reduzir competição visual.",
       ],
       [
@@ -127,7 +127,7 @@ const sections = [
           "Loading",
           "Empty state inicial",
           "Nenhum resultado de busca ou filtro",
-          "Cenários de erro recuperável",
+          "Cenários de erro",
           "Permissão negada",
           "Sucesso ou confirmação, quando necessário",
           "Estado desabilitado ou indisponível, quando necessário",
@@ -158,7 +158,7 @@ const sections = [
         "Evite sobreposição, corte de conteúdo ou CTA inacessível.",
       ],
       [
-        "Validações e mensagens de erro continuam fáceis de localizar?",
+        "Validação, mensagens de erro e próximo passo continuam fáceis de localizar?",
         "A mensagem deve aparecer próxima ao campo ou contexto que precisa de correção.",
       ],
     ],
@@ -221,11 +221,11 @@ const sections = [
         "Considere a Sharesheet para compartilhar conteúdo com outros aplicativos.",
       ],
       [
-        "Se houver notificações, estão definidos conteúdo, ação e destino ao tocar?",
+        "Notificações seguem os padrões do Android?",
         "A notificação deve levar a pessoa ao contexto correto dentro do app.",
       ],
       [
-        "Alguma interface do sistema está sendo recriada sem necessidade?",
+        "Alguma interface do sistema está sendo customizada sem necessidade?",
         "Antes de criar uma solução própria, verifique se o Android já oferece essa interface.",
       ],
     ],
