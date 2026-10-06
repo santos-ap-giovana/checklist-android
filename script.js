@@ -32,6 +32,14 @@ const sections = [
       "Revise a composição da tela em relação ao espaço disponível e às áreas controladas pelo Android.",
     items: [
       [
+        "A tela considera as áreas ocupadas pelas barras e recortes do sistema?",
+        "Conteúdos importantes devem permanecer acessíveis considerando status bar, navigation bar e recortes da tela.",
+      ],
+      [
+        "O layout está preparado para funcionar edge-to-edge?",
+        "Backgrounds, imagens e conteúdos roláveis podem ocupar toda a tela, enquanto conteúdos importantes devem respeitar os insets do sistema.",
+      ],
+      [
         "O conteúdo funciona nas larguras e alturas previstas para o app?",
         "Considere telas menores, pouca altura disponível e mudanças no espaço disponível.",
       ],
