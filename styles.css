@@ -745,8 +745,14 @@ h1 {
   }
 
   .summary {
-    position: static;
+    position: sticky;
+    top: 8px;
+    z-index: 20;
+
     grid-template-columns: 1fr;
+
+    background: rgb(255 255 255 / 96%);
+    backdrop-filter: blur(12px);
   }
 
   .check-item {
