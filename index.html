@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checklist de revisão de demanda — App Android</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="page-shell">
+      <header class="hero">
+        <p class="eyebrow">App Frenet · Android</p>
+
+        <h1>Checklist de revisão de demanda</h1>
+
+        <p class="lead">
+          Use este checklist como apoio durante a construção e revisão de demandas para o app Android.
+          Ele ajuda a conferir decisões específicas da tela e do fluxo que podem exigir atenção no contexto mobile.
+        </p>
+
+        <!--
+          Design System - Frenético 2.0
+          Componente: Alert
+          Tone: Info
+        -->
+        <div class="ds-alert ds-alert--info" role="note">
+          <span class="ds-alert__icon" aria-hidden="true">
+            <svg
+              width="14"
+              height="14"
+              viewBox="0 0 14 14"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M14 7C14 10.866 10.866 14 7 14C3.13401 14 0 10.866 0 7C0 3.13401 3.13401 0 7 0C10.866 0 14 3.13401 14 7ZM8 4C8 4.55228 7.55228 5 7 5C6.44772 5 6 4.55228 6 4C6 3.44772 6.44772 3 7 3C7.55228 3 8 3.44772 8 4ZM5.75 7C5.33579 7 5 7.33579 5 7.75C5 8.16421 5.33579 8.5 5.75 8.5H6.5V10.25C6.5 10.6642 6.83579 11 7.25 11C7.66421 11 8 10.6642 8 10.25V7.75C8 7.33579 7.66421 7 7.25 7H5.75Z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+
+          <div class="ds-alert__content">
+            <strong class="ds-alert__title">Como preencher</strong>
+
+            <p class="ds-alert__text">
+              Revise apenas os critérios que fazem sentido para a demanda. Marque <strong>OK</strong> quando o ponto estiver definido, <strong>Pendente</strong> quando ainda precisar de revisão ou alinhamento e <strong>N/A</strong> quando não se aplicar. Use a observação quando precisar registrar um contexto ou decisão.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section
+        class="identification"
+        aria-labelledby="identificationTitle"
+      >
+        <header class="section-header">
+          <h2
+            class="section-title"
+            id="identificationTitle"
+          >
+            Identificação da demanda
+          </h2>
+        </header>
+
+        <div class="identification__body">
+          <div class="ds-text-field">
+            <label
+              class="ds-text-field__label"
+              for="demandName"
+              >
+              Nome da demanda
+              <span
+                class="ds-text-field__required"
+                aria-hidden="true"
+              >
+                *
+              </span>
+            </label>
+
+            <input
+              class="ds-text-field__input"
+              id="demandName"
+              name="demandName"
+              type="text"
+              autocomplete="off"
+              placeholder="Ex.: Nova experiência de rastreios"
+              required
+              aria-required="true"
+              aria-describedby="demandNameError"
+            />
+
+            <p
+              class="ds-text-field__error"
+              id="demandNameError"
+              hidden
+            >
+              Informe o nome da demanda.
+            </p>
+
+            <p
+              class="print-field-value"
+              id="printDemandName"
+            ></p>
+          </div>
+
+          <div
+            class="ds-text-field"
+            id="figmaField"
+          >
+            <label
+              class="ds-text-field__label"
+              for="figmaLink"
+            >
+              Link do Figma
+            </label>
+
+            <input
+              class="ds-text-field__input"
+              id="figmaLink"
+              name="figmaLink"
+              type="url"
+              inputmode="url"
+              autocomplete="off"
+              placeholder="https://www.figma.com/design/..."
+              aria-describedby="figmaLinkError"
+            />
+
+            <p
+              class="ds-text-field__error"
+              id="figmaLinkError"
+              hidden
+            >
+              Insira um link válido do Figma.
+            </p>
+
+            <a
+              class="print-field-value print-field-link"
+              id="printFigmaLink"
+              target="_blank"
+              rel="noopener noreferrer"
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <aside class="summary" aria-label="Resumo do checklist">
+        <div class="summary__progress">
+          <div class="progress-label">
+            <span>Progresso do checklist</span>
+            <strong id="progressText">0%</strong>
+          </div>
+
+          <div
+            class="progress"
+            role="progressbar"
+            aria-label="Progresso do checklist"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+            id="progress"
+          >
+            <div class="progress__bar" id="progressBar"></div>
+          </div>
+        </div>
+
+        <div class="summary__actions">
+          <!--
+            Design System - Frenético 2.0
+            Componente: Button
+            Variant: Default
+            Hierarchy: Outline
+            Size: Medium
+          -->
+          <button
+            class="ds-button ds-button--outline ds-button--medium"
+            id="resetBtn"
+            type="button"
+          >
+            Limpar tudo
+          </button>
+
+          <!--
+            Design System - Frenético 2.0
+            Componente: Button
+            Variant: Default
+            Hierarchy: Primary
+            Size: Medium
+          -->
+          <button
+            class="ds-button ds-button--primary ds-button--medium"
+            id="savePdfBtn"
+            type="button"
+          >
+            Salvar PDF
+          </button>
+        </div>
+      </aside>
+
+      <div id="checklist"></div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
